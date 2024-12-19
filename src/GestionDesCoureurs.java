@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class GestionDesCoureurs {
-    ArrayList<Coureur> listeCoureurs = new ArrayList();
+    ArrayList<Coureur> listeCoureurs = new ArrayList<Coureur>();
 
     public void Lirefichier() throws IOException {
         String line = null;
@@ -23,7 +23,7 @@ public class GestionDesCoureurs {
                             LocalTime.ofSecondOfDay(Long.valueOf(s[4]))
                     )
             );
-            System.out.println(line);
+
         }
         br.close();
     }
@@ -43,8 +43,7 @@ public class GestionDesCoureurs {
         listeCoureurs.sort((Comparator.comparing(Coureur::getNom)));
     }
     public void decroissantalphabet() throws IOException {
-        listeCoureurs.sort((Comparator.comparing(Coureur::getNom).reversed()));
-
+        listeCoureurs.sort((Comparator.comparing(Coureur::getNom).reversed()));;
     }
     public void croissantPrenom() throws IOException {
         listeCoureurs.sort((Comparator.comparing(Coureur::getPrenom)));
@@ -52,4 +51,12 @@ public class GestionDesCoureurs {
     public void decroissantPrenom() throws IOException {
         listeCoureurs.sort((Comparator.comparing(Coureur::getPrenom).reversed()));
     }
+    public void croissant() throws IOException {
+        listeCoureurs.sort((Comparator.comparing(Coureur::getTemps)));
+    }
+    public void decroissant() throws IOException {
+        listeCoureurs.sort((Comparator.comparing(Coureur::getTemps).reversed()));
+    }
+    
+
 }

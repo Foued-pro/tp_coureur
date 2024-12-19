@@ -1,3 +1,6 @@
+import java.time.LocalDate;
+import java.time.LocalTime;
+
 public class Personne {
     private String nom;
     private String prenom;
@@ -11,6 +14,11 @@ public class Personne {
         this.nom = nom;
         this.prenom = prenom;
 
+    }
+
+    public String getInfo()
+    {
+        return genre + " " + nom + " " + prenom+ " "+ genre + " " ;
     }
 
     public String getNom() {
@@ -36,5 +44,6 @@ public class Personne {
     public void setGenre(Genre genre) {
         this.genre = genre;
     }
+
 }
 
