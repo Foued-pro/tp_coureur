@@ -9,16 +9,16 @@ public class Ihm {
         int choix = 0;
         do {
 
-            System.out.println(" Lire la liste des coureurs dans le fichier\n" +
-                    " Afficher par ordre alphabétique de leur nom croissant\n" +
-                    " Afficher par ordre alphabétique de leur nom décroissant\n" +
-                    " Afficher par ordre alphabétique de leur prénom croissant\n" +
-                    " Afficher par ordre alphabétique de leur prénom décroissant\n" +
-                    " Afficher par ordre de classement croissant\n" +
-                    " Afficher par ordre de classement décroissant\n" +
-                    " Ajouter un coureur\n" +
-                    " Supprimer un coureur\n" +
-                    " Modifier un coureur");
+            System.out.println("1 Lire la liste des coureurs dans le fichier\n" +
+                    "2 Afficher par ordre alphabétique de leur nom croissant\n" +
+                    "3 Afficher par ordre alphabétique de leur nom décroissant\n" +
+                    "4 Afficher par ordre alphabétique de leur prénom croissant\n" +
+                    "5 Afficher par ordre alphabétique de leur prénom décroissant\n" +
+                    "6 Afficher par ordre de classement croissant\n" +
+                    "7 Afficher par ordre de classement décroissant\n" +
+                    "8 Ajouter un coureur\n" +
+                    "9 Supprimer un coureur\n" +
+                    "10 Modifier un coureur");
             choix = In.readInteger();
 
 
@@ -36,22 +36,32 @@ public class Ihm {
                 case 3:
                     System.out.println("voici la liste par ordre alphabétique de leur nom décroissant");
                     g.decroissantalphabet();
+                    AfficheCoureurs();
+
                     break;
                 case 4:
                     System.out.println("voici la liste par ordre alphabétique de leur prénom croissant");
                     g.croissantPrenom();
+                    AfficheCoureurs();
+
                     break;
                 case 5:
                     System.out.println("voici lla liste par ordre alphabétique de leur prénom decroissant");
                     g.decroissantPrenom();
+                    AfficheCoureurs();
+
                     break;
                 case 6:
                     System.out.println("voici la liste par ordre de classement croissant");
                     g.croissant();
+                    AfficheCoureurs();
+
                     break;
                 case 7:
                     System.out.println("voici la liste par ordre de classement decroissant");
                     g.decroissant();
+                    AfficheCoureurs();
+
                     break;
             }
         } while (choix != 0);
